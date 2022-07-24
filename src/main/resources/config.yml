@@ -1,0 +1,48 @@
+# MySql details, in this database the stats will be stored.
+sql:
+  ip: 'localhost'
+  # When not specified leave as 3306 as this is the default SQL port.
+  port: 3306
+  username: 'username'
+  password: 'password123'
+  database: 'minecraft'
+
+# Set to false when you allow cracked clients.
+online-mode: true
+
+# When typing this command a GUI will open where people can view their stats.
+stats-command: '/stats'
+
+gui-title: '&6&lUHC Stats'
+
+# If you have multiple UHC GameModes on your server you can configure them here. If you only have one you can delete this section.
+gamemodes:
+  # The current server GameMode. If this is a UHC server under what GameMode should the statistics be saved?
+  server-gamemode: 'cutclean'
+
+  # GameMode Key. Should always be lowercase! No spaces only _
+  cutclean:
+    # Name of the GameMode in the stats GUI
+    name: '&aCutClean'
+    # Display Item in the stats GUI (You can find a list of materials here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html).
+    display-item: 'IRON_INGOT'
+  uhc_run:
+    name: '&aUhc Run'
+    display-item: 'DIAMOND_PICKAXE'
+
+leaderboards: {}
+
+leaderboards-sample:
+  board-1:
+    # Choose from: KILL, DEATH and WIN
+    stat-type: KILL
+    gamemode: cutclean
+    title: '&aCutClean top 10 kills'
+    # Layout of the leader-board lines.
+    lines: '&a%number%. %player%: %count%'
+    # Location where the leader-board should spawn.
+    location:
+      world: world
+      x: 0
+      y: 50
+      z: 0
